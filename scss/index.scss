@@ -1,1 +1,29 @@
-@import "main";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$color1: white;
+$color2: #1a2044;
+$color3: #0fa1f1;
+$color4: #474C69;
+
+body {
+    
+}
+
+.columns {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.banner {
+//    background-color: $color4;
+    display: flex;
+    justify-content: center;
+}
+
+.portrait {
+    @include transform(scale(0.6)); 
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    @include border-right-radius(50%);
+}
