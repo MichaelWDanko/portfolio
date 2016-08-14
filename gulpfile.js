@@ -31,6 +31,11 @@ gulp.task('images', function () {
         .pipe(gulp.dest('./public/images/'));
 });
 
+gulp.task('files', function () {
+    return gulp.src('./files/*')
+        .pipe(gulp.dest('./public/files/'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('./*.html', ['html']);
     gulp.watch('./scss/*.scss', ['css']);

@@ -26,8 +26,11 @@ body {
     @include border-top-radius(50%);
     @include border-bottom-radius(50%);
     @include border-right-radius(50%);
-    display: inline;
-    
+    float: left; 
+}
+.section {
+    overflow: auto;
+    width: 100%;
 }
 
 #contactlinks {
