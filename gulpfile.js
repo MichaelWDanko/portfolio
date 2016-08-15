@@ -26,6 +26,16 @@ gulp.task('cname', function () {
         .pipe(gulp.dest('./public/'));
 });
 
+gulp.task('images', function () {
+    return gulp.src('./images/*')
+        .pipe(gulp.dest('./public/images/'));
+});
+
+gulp.task('files', function () {
+    return gulp.src('./files/*')
+        .pipe(gulp.dest('./public/files/'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('./*.html', ['html']);
     gulp.watch('./scss/*.scss', ['css']);

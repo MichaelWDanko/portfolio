@@ -1,9 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="./css/index.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/app.js"></script>
+    <link rel="icon" href="/images/favicon.png">
+</head>
+
+<body>
+    <header class="content">
+        <!--        <div class="banner">-->
+        <!--            <img src="images/logo.png" alt="Initials logo">-->
+        <!--        </div>-->
+        <h1>Michael Danko</h1>
+        <nav>
+            <ul>
+                <li>Education</li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="columns">
+
+        <div class="section" id="about">
+            <h1 class="section-header left">Who I am.</h1>
+            <div class="section-content">
+                <img class="portrait" src="images/portrait.jpg" alt="A professional portrait of Michael Danko">
+                <p>Hello, I'm Michael and I enjoy building production quality web applications that deliver an enjoyable experience for users.</p>
+
+                <p>I would like to formally welcome you to my page as I hope you explore the various sections to get an understanding of who I am. Take a look for yourself at some of my past projects to review the quality of my work. I am currently seeking any employment opportunities throughout the Carolinas as a front end developer. I am able to contribute hard work and dedication to continually improve my knowledge of web development on my own time. I invite you to connect with me via one of the platforms below if you believe I would be a good fit for your team. </p>
+
+                <p> This past February I typed my first JavaScript function and since then, I have discovered a new passion in my life. I had the opportunity to be apart of The Iron Yard - Charlotte's first group of students to enroll and complete the JavaScript and MVC Frameworks course. Prior to the 12 week immersive course, I could barely explain the difference between classes and IDs used in HTML5 but now I am proficient enough to be exploring frameworks such as AngularJS.</p>
+
+                <p>As a developer, I am self motivated to do what it takes to complete any project I am working on. I enjoy collaborating on bigger projects with others as I believe I believe in seeking out additional perspectives is important. By attending local web focused Meetups I have been able to learn more about the field by emulating the more experienced developers around me. The community of developers is just one aspect of web development that I enjoy. The helpfulness and collaborative mindset is what drives me to give back and contribute to the open-source community.</p>
+
+
+            </div>
+        </div>
+
+        <div class="section" id="education">
+            <h1 class="section-header right">Education</h1>
+            <div class="section-content">
+                <div class="education-field">
+                    <h2>JavaScript and MVC Frameworks</h2>
+                    <h3>The Iron Yard - Charlotte, NC</h3>
+                    <h4>February 2016 - April 2016</h4>
+                    <ul>
+                        <li>The immersive Front End Engineering course taught design practices needed to deliver enjoyable web experiences.</li>
+                        <li>Collaberated with peers to create production quality web applications.</li>
+                        <li>Gained hands on experience using industry standard build tools to create sites.</li>
+                    </ul>
+                </div>
+                <div class="education-field">
+                    <h2>Criminology &amp; Criminal Justice, <em>Bachelor of Arts</em></h2>
+                    <h3>University of South Carolina - Columbia, SC</h3>
+                    <h4>August 2011 - August 2015</h4>
+                    <ul>
+                        <li>Studied the criminal justice system of the United States.</li>
+                        <li>Focused on the causes of and societal responses to crime and deviant behavior.</li>
+                        <li>Developed an understanding for the creation and implementation of Criminal Justice policy.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="skills">
+            <h1 class="section-header left">Skill Set</h1>
+            <div class="section-content">
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3 / SASS</li>
+                    <li>JavaScript</li>
+                    <li>Git / GitHub</li>
+                    <li>AngularJS</li>
+                    <li>JQuery</li>
+                    <li>UnderscoreJS</li>
+                    <li>BackboneJS</li>
+                    <li>Gulp</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="projects">
+            <h1 class="section-header right">Projects</h1>
+            <div class="section-content">
+                <div class="project">
+                    <h2>Welcome Weather</h2>
+                    <ul>
+                        <li>A one page, multi-view AngularJS application</li>
+                        <li>Delivers a 5-day weather forecast relative to a user's geolocation</li>
+                        <li>Utilizes multiple AJAX requests to retrieve information</li>
+                    </ul>
+                    <img class="screenshot" src="images/screen-welcome.png" alt="A screenshot of the Welcome Weather application.">
+                </div>
+                <div class="project">
+                    <h2>Anchorman</h2>
+                    <ul>
+                        <li>A multi-view AngularJS application</li>
+                        <li>Utilizing a supplied API, creates a stream of news articles from relevant sources using AJAX requests</li>
+                        <li>Highlights articles with titles matching an interest list created by users</li>
+                    </ul>
+                    <img class="screenshot" src="images/screen-anchorman.png" alt="A screenshot of the Anchorman application.">
+                </div>
+                <div class="project">
+                    <h2>Olympic Adventures</h2>
+                    <ul>
+                        <li>Used BackboneJS to create an interactive game with a visual element</li>
+                        <li>Included hardware support for arrow keys to navigate the game</li>
+                        <li>Users choose between two vehicles with varying fuel consumption rates as they try to navigate throughout the map without losing fuel</li>
+
+                    </ul>
+                    <img class="screenshot" src="images/screen-olympic.png" alt="A screenshot of the Olympic Adventures game.">
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <h1 class="section-header left">Connect</h1>
+            <div class="section-content" id="contactlinks">
+                <a href="mailto:MichaelDanko@icloud.com"><img src="images/mail.png" alt="A URL icon for Michael Danko's email."></a>
+                <a href="tel:17047437035"><img src="images/phone.png" alt="A URL icon for Michael Danko's phone number."></a>
+                <a target="_blank" href="https://linkedin.com/in/MichaelWDanko"><img src="images/linkedin.png" alt="A URL icon for Michael Danko's LinkedIn page."></a>
+                <a target="_blank" href="https://github.com/MichaelWDanko"><img src="images/github2.png" alt="A URL icon for Michael Danko's GitHub profile."></a>
+                <a target="_blank" href="https://facebook.com/michaelwdanko"><img src="images/facebook.png" alt="A URL icon for Michael Danko's Facebook page."></a>
+                <a target="_blank" href="https://twitter.com/MichaelWDanko"><img src="images/twitter.png" alt="A URL icon for Michael Danko's Twitter profile."></a>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!--        Include content here to credit icons-->
+        <h1 id="license">Licenses</h1>
+        <h1>Email:</h1><h2>MichaelDanko@icloud.com</h2>
+        <h1>Phone:</h1><h2>(704) 743-7035</h2>
+        <a target="_blank" href="./files/Michael_Danko_Resume.pdf"><h1>Resume</h1></a>
+    </footer>
+</body>
+
 </html>
