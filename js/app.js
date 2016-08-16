@@ -81,8 +81,8 @@ window.addEventListener('load', function () {
 
     var flipBack = function () {
         if (skillFlip.html === true) {
-          skillHtml.textContent = "HTML5";
-          skillFlip.html = false;
+            skillHtml.textContent = "HTML5";
+            skillFlip.html = false;
         }
         if (skillFlip.css === true) {
             skillCss.textContent = "CSS / SASS";
@@ -116,8 +116,8 @@ window.addEventListener('load', function () {
             skillGulp.textContent = "Gulp";
             skillFlip.gulp = false;
         }
-    };    
-    
+    };
+
     skillHtml.addEventListener('click', function () {
         console.log('Clicked on HTML!');
         if (skillFlip.html === false) {
@@ -127,9 +127,8 @@ window.addEventListener('load', function () {
         } else {
             skillHtml.textContent = 'HTML5';
             skillFlip.html = false;
-        } 
+        }
     });
-
     skillCss.addEventListener('click', function () {
         console.log('Clicked on CSS!');
         if (skillFlip.css === false) {
@@ -141,7 +140,6 @@ window.addEventListener('load', function () {
             skillFlip.css = false;
         }
     });
-
     skillJs.addEventListener('click', function () {
         console.log('Clicked on JS!');
         if (skillFlip.js === false) {
@@ -153,7 +151,6 @@ window.addEventListener('load', function () {
             skillFlip.js = false;
         }
     });
-
     skillGit.addEventListener('click', function () {
         console.log('Clicked on Git!');
         if (skillFlip.git === false) {
@@ -165,7 +162,6 @@ window.addEventListener('load', function () {
             skillFlip.git = false;
         }
     });
-
     skillAngular.addEventListener('click', function () {
         console.log('Clicked on AngularJS!');
         if (skillFlip.angular === false) {
@@ -177,7 +173,6 @@ window.addEventListener('load', function () {
             skillFlip.angular = false;
         }
     });
-
     skillJquery.addEventListener('click', function () {
         console.log('Clicked on JQuery!');
         if (skillFlip.jquery === false) {
@@ -189,7 +184,6 @@ window.addEventListener('load', function () {
             skillFlip.jquery = false;
         }
     });
-
     skillUnderscore.addEventListener('click', function () {
         console.log('Clicked on UnderscoreJS!');
         if (skillFlip.underscore === false) {
@@ -201,7 +195,6 @@ window.addEventListener('load', function () {
             skillFlip.underscore = false;
         }
     });
-
     skillBackbone.addEventListener('click', function () {
         console.log('Clicked on BackboneJS!');
         if (skillFlip.backbone === false) {
@@ -213,7 +206,6 @@ window.addEventListener('load', function () {
             skillFlip.backbone = false;
         }
     });
-
     skillGulp.addEventListener('click', function () {
         console.log('Clicked on Gulp!');
         if (skillFlip.gulp === false) {
@@ -226,5 +218,32 @@ window.addEventListener('load', function () {
         }
     });
 
+    /*
+    This Imediately Invoked Function is responsible for checking
+    whether or not the return to top button should be run each time
+    the window stops scrolling.
+    */
+    (function () {
+        var time;
+        var displayElevator = function () {
+            var totalScroll = document.body.scrollHeight;
+            var educationScroll = document.getElementById('education').scrollHeight;
+            var educationPercent = Math.round((educationScroll / totalScroll) * 1000) / 1000;
+            var button = document.getElementById('top-button');
+
+            if (Math.round((document.body.scrollTop / totalScroll) * 100) / 100 <= educationPercent) {
+                console.log('Not far enough');
+                button.classList.add('hidden');
+            } else {
+                console.log('Show it');
+                button.classList.remove('hidden');
+            }
+
+        };
+        window.addEventListener('scroll', function () {
+            clearTimeout(time);
+            time = setTimeout(displayElevator, 1500);
+        });
+    })();
 
 });
