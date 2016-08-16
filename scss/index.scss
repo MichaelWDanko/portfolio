@@ -1,6 +1,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import url(https://fonts.googleapis.com/css?family=Exo+2:400,200,500,700);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,200,500,700,300italic);
 
 /*
 SASS Variables
@@ -13,6 +13,7 @@ $color3: #F9CF00;
 $color4: #F19F4D;
 $color5: #6d6d6d;
 $color6: #25548b;
+$color7: #214b7d;
 
 
 /*
@@ -50,6 +51,28 @@ header {
         font-size: 2.3em;
         width: 50%;
         
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        padding: .6em 1.0em;
+        background-color: $color6;
+        @include border-top-radius(10px);
+        @include border-bottom-radius(10px);
+        border: 2px solid $color3;
+        color: white;
+        font-size: 1em;
+        @include transition(all 0.5s ease-in-out);
+        cursor: pointer;
+    }
+    li:hover {
+        border: 2px solid $color4;
+//        border-top: 2px solid $color4;
+//        border-left: 2px solid $color4;
+//        border-right: 2px solid transparent;
+//        border-bottom: 2px solid transparent;
+        box-shadow: 3px 5px 0 0 $color7;
     }
 }
 
@@ -102,6 +125,7 @@ nav {
     border-bottom: 8px solid $color2;
     border-left: 3px solid $color2;
     border-right: 8px solid $color2;
+    border-radius: 10px;
 }
 .section:hover .section-content {
     //CSS to border the .section-content on hover.
@@ -112,6 +136,26 @@ nav {
     color: white;
 }
 
+
+.hidden {
+//    display: none;
+}
+#top-button {
+    @include transform(scale(0.10));
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    @include transition(all 0.5s ease-in-out);
+    opacity: .3;
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    cursor: pointer;
+}
+
+#top-button:hover {
+    opacity: .9;
+    @include transform(scale(0.15));
+}
 
 /*
 Styling for the About Me section
@@ -168,12 +212,22 @@ Styling for the Skills section
         display: inline-block;
         background-color: $color6;
         border: 3px solid $color3;
+        @include border-top-radius(10px);
+        @include border-bottom-radius(10px);
         padding: .4em .5em;
         margin: .5em 0;
         @include transition(all 0.5s ease-in-out);
+        cursor: pointer;
     }
     li:hover {
         border: 3px solid $color4;
+        box-shadow: 3px 5px 0 0 $color7;
+    }
+    h2 {
+        text-align: center;
+        font-family: $font1;
+        font-weight: 300;
+        font-style: italic;
     }
 }
 
@@ -187,7 +241,21 @@ Styling for the Connect section
 }
 
 
-
+/*
+Footer styling
+*/
+footer {
+    border-top: 5px solid $color3;
+    background-color: $color1;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.footer-content {
+    h1 {
+        margin-bottom: 0;
+        padding-bottom: .5em;
+    }
+}
 
 
 // .project display:none is to test what the site looks like without the pictures
