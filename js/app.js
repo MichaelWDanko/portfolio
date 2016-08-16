@@ -10,4 +10,6 @@ window.addEventListener('load', function () {
         window.alert(licenseText);
     });
     
+    
+    
 });
