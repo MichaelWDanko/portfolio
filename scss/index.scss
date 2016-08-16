@@ -1,39 +1,196 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,200,500,700);
 
-$color1: white;
-$color2: #1a2044;
-$color3: #0fa1f1;
-$color4: #474C69;
+/*
+SASS Variables
+*/
+$font1: 'Exo 2', sans-serif;
 
-body {
-    
+$color1: #4484CE;
+$color2: #D9D9D9;
+$color3: #F9CF00;
+$color4: #F19F4D;
+$color5: #6d6d6d;
+$color6: #25548b;
+
+
+/*
+Page wide stylings.
+*/
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: $color4;
 }
-
 .columns {
     margin-left: 10%;
     margin-right: 10%;
 }
-
-.banner {
+main {
 //    background-color: $color4;
-    display: flex;
-    justify-content: center;
 }
 
-.portrait {
-    @include transform(scale(0.6)); 
-    @include border-top-radius(50%);
-    @include border-bottom-radius(50%);
-    @include border-right-radius(50%);
-    float: left; 
+header {
+    background-color: $color1;
+    height: 5em;
+    border-bottom: 5px solid $color3;
 }
-.section {
+.header-content {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+    
+    h1 {
+        display: inline;
+        margin: 0;
+        font-family: $font1;
+        font-weight: 200;
+        font-size: 2.3em;
+        width: 50%;
+        
+    }
+}
+
+nav {
+    display: inline-block;
+    width: 50%;
+    
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    li {
+        display: inline-block;
+    }
+}
+  
+.section-header {
+    color: $color1;
+    font-family: $font1;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 5px;
+    @include transition(all 0.5s ease-in-out);
+    border-bottom: 5px solid transparent;
+    width: auto;
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+.section:hover .section-header {
+//CSS to underline the .section-header on hover.
+    color: $color6;
+    font-weight: 500;
+}
+
+.section-content {
+
+    padding: 50px;
+    background-color: $color1;
+    
+    color: $color2; 
+    font-family: $font1;
+    font-size: 1.15em;
+    
+    @include transition(all 0.5s ease-in-out);
+    border-top: 3px solid $color2;
+    border-bottom: 8px solid $color2;
+    border-left: 3px solid $color2;
+    border-right: 8px solid $color2;
+}
+.section:hover .section-content {
+    //CSS to border the .section-content on hover.
+    border-top: 3px solid $color5;
+    border-bottom: 8px solid $color5;
+    border-left: 3px solid $color5;
+    border-right: 8px solid $color5;
+    color: white;
+}
+
+
+/*
+Styling for the About Me section
+*/
+.portrait {
+    @include transform(scale(0.85)); 
+    @include border-top-radius(20%);
+    @include border-bottom-radius(20%);
+    @include border-right-radius(20%);
+    float: left; 
+    margin: 0 10px 10px 0;
+}
+#about {
     overflow: auto;
     width: 100%;
+    p {
+        margin-bottom: 1.6em;
+    }
 }
 
+/*
+Styling for the Education section
+*/
+.education-field {
+    border-bottom: 3px solid $color3;
+    h2 {
+        margin: 0.3em 0;
+        font-weight: 700;
+    }
+    h3 {
+        margin: 0.4em 0;
+        font-weight: 500;
+    }
+    h4 {
+        margin: 0.6em 0 0 0;
+        font-weight: 400;
+    }
+    ul {
+        margin-top: .2em;
+        margin-bottom: .6em;
+    }
+}
+
+/*
+Styling for the Skills section
+*/
+#skills {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    li {
+        display: inline-block;
+        background-color: $color6;
+        border: 3px solid $color3;
+        padding: .4em .5em;
+        margin: .5em 0;
+        @include transition(all 0.5s ease-in-out);
+    }
+    li:hover {
+        border: 3px solid $color4;
+    }
+}
+
+
+/*
+Styling for the Connect section
+*/
 #contactlinks {
     display: flex;
     justify-content: space-between;
+}
+
+
+
+
+
+// .project display:none is to test what the site looks like without the pictures
+.project {
+    display: none;
 }

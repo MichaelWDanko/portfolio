@@ -10,26 +10,25 @@
 </head>
 
 <body>
-    <header class="content">
-        <!--        <div class="banner">-->
-        <!--            <img src="images/logo.png" alt="Initials logo">-->
-        <!--        </div>-->
-        <h1>Michael Danko</h1>
-        <nav>
-            <ul>
-                <li>Education</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <header class="">
+        <div class="header-content columns">
+            <h1>Michael Danko</h1>
+            <nav>
+                <ul>
+                    <li>Education</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
 
     <main class="columns">
 
         <div class="section" id="about">
-            <h1 class="section-header left">Who I am.</h1>
+            <h1 class="section-header left">About Me</h1>
             <div class="section-content">
                 <img class="portrait" src="images/portrait.jpg" alt="A professional portrait of Michael Danko">
                 <p>Hello, I'm Michael and I enjoy building production quality web applications that deliver an enjoyable experience for users.</p>
@@ -74,15 +73,15 @@
             <h1 class="section-header left">Skill Set</h1>
             <div class="section-content">
                 <ul>
-                    <li>HTML5</li>
-                    <li>CSS3 / SASS</li>
-                    <li>JavaScript</li>
-                    <li>Git / GitHub</li>
-                    <li>AngularJS</li>
-                    <li>JQuery</li>
-                    <li>UnderscoreJS</li>
-                    <li>BackboneJS</li>
-                    <li>Gulp</li>
+                    <li id="skill-html">HTML5</li>
+                    <li id="skill-css">CSS3 / SASS</li>
+                    <li id="skill-js">JavaScript</li>
+                    <li id="skill-git">Git / GitHub</li>
+                    <li id="skill-angular">AngularJS</li>
+                    <li id="skill-jquery">JQuery</li>
+                    <li id="skill-underscore">UnderscoreJS</li>
+                    <li id="skill-backbone">BackboneJS</li>
+                    <li id="skill-gulp">Gulp</li>
                 </ul>
             </div>
         </div>
@@ -134,11 +133,13 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="columns">
         <!--        Include content here to credit icons-->
         <h1 id="license">Licenses</h1>
-        <h1>Email:</h1><h2>MichaelDanko@icloud.com</h2>
-        <h1>Phone:</h1><h2>(704) 743-7035</h2>
+        <h1>Email:</h1>
+        <h2>MichaelDanko@icloud.com</h2>
+        <h1>Phone:</h1>
+        <h2>(704) 743-7035</h2>
         <a target="_blank" href="./files/Michael_Danko_Resume.pdf"><h1>Resume</h1></a>
     </footer>
 </body>
