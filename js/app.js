@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
         console.log('Clicked on licenses');
         window.alert(licenseText);
     });
-    
+
     var skillScores = {
         html: '7/10',
         css: '8/10',
@@ -21,41 +21,133 @@ window.addEventListener('load', function () {
         backbone: '5/10',
         gulp: '9/10',
     };
-    
-    
-    var focusedElement;
-    
-    var skillHtml = document.getElementById('skill-html').addEventListener('click', function () {
+
+    // This object is a reference for the functions below to know what to switch to.
+    var skillFlip = {
+        html: false,
+        css: false,
+        js: false,
+        git: false,
+        angular: false,
+        jquery: false,
+        underscore: false,
+        backbone: false,
+        gulp: false,
+    };
+
+
+
+    var skillHtml = document.getElementById('skill-html');
+    skillHtml.addEventListener('click', function () {
         console.log('Clicked on HTML!');
+        if (skillFlip.html === false) {
+            skillHtml.textContent = skillScores.html;
+            skillFlip.html = true;
+        } else {
+            skillHtml.textContent = 'HTML5';
+            skillFlip.html = false;
+        }
     });
-    var skillCss = document.getElementById('skill-css').addEventListener('click', function () {
+    
+    var skillCss = document.getElementById('skill-css');
+    skillCss.addEventListener('click', function () {
         console.log('Clicked on CSS!');
+        if (skillFlip.css === false) {
+            skillCss.textContent = skillScores.css;
+            skillFlip.css = true;
+        } else {
+            skillCss.textContent = 'CSS / SASS';
+            skillFlip.css = false;
+        }
     });
-    var skillJs = document.getElementById('skill-js').addEventListener('click', function () {
+    
+    var skillJs = document.getElementById('skill-js');
+    skillJs.addEventListener('click', function () {
         console.log('Clicked on JS!');
+        if (skillFlip.js === false) {
+            skillJs.textContent = skillScores.js;
+            skillFlip.js = true;
+        } else {
+            skillJs.textContent = 'JavaScript';
+            skillFlip.js = false;
+        }
     });
-    var skillGit = document.getElementById('skill-git').addEventListener('click', function () {
+    
+    var skillGit = document.getElementById('skill-git')
+    skillGit.addEventListener('click', function () {
         console.log('Clicked on Git!');
+        if (skillFlip.git === false) {
+            skillGit.textContent = skillScores.git;
+            skillFlip.git = true;
+        } else {
+            skillGit.textContent = 'Git/ GitHub';
+            skillFlip.git = false;
+        }
     });
-    var skillAngular = document.getElementById('skill-angular').addEventListener('click', function () {
+    
+    var skillAngular = document.getElementById('skill-angular');
+    skillAngular.addEventListener('click', function () {
         console.log('Clicked on AngularJS!');
+        if (skillFlip.angular === false) {
+            skillAngular.textContent = skillScores.angular;
+            skillFlip.angular = true;
+        } else {
+            skillAngular.textContent = 'AngularJS';
+            skillFlip.angular = false;
+        }
     });
-    var skillJquery = document.getElementById('skill-jquery').addEventListener('click', function () {
+    
+    var skillJquery = document.getElementById('skill-jquery');
+    skillJquery.addEventListener('click', function () {
         console.log('Clicked on JQuery!');
+        if (skillFlip.jquery === false) {
+            skillJquery.textContent = skillScores.jquery;
+            skillFlip.jquery = true;
+        } else {
+            skillJquery.textContent = 'JQuery';
+            skillFlip.jquery = false;
+        }
     });
-    var skillUnderscore = document.getElementById('skill-underscore').addEventListener('click', function () {
+    
+    var skillUnderscore = document.getElementById('skill-underscore');
+    skillUnderscore.addEventListener('click', function () {
         console.log('Clicked on UnderscoreJS!');
+        if (skillFlip.underscore === false) {
+            skillUnderscore.textContent = skillScores.underscore;
+            skillFlip.underscore = true;
+        } else {
+            skillUnderscore.textContent = 'UnderscorJS';
+            skillFlip.underscore = false;
+        }
     });
-    var skillBackbone = document.getElementById('skill-backbone').addEventListener('click', function () {
+    
+    var skillBackbone = document.getElementById('skill-backbone');
+    skillBackbone.addEventListener('click', function () {
         console.log('Clicked on BackboneJS!');
+        if (skillFlip.backbone === false) {
+            skillBackbone.textContent = skillScores.backbone;
+            skillFlip.backbone = true;
+        } else {
+            skillBackbone.textContent = 'BackboneJS';
+            skillFlip.backbone = false;
+        }
     });
-    var skillGulp = document.getElementById('skill-gulp').addEventListener('click', function () {
+    
+    var skillGulp = document.getElementById('skill-gulp');
+    skillGulp.addEventListener('click', function () {
         console.log('Clicked on Gulp!');
+        if (skillFlip.gulp === false) {
+            skillGulp.textContent = skillScores.gulp;
+            skillFlip.gulp = true;
+        } else {
+            skillGulp.textContent = 'Gulp';
+            skillFlip.gulp = false;
+        }
     });
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 });
