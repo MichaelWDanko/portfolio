@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 
 gulp.task('default', ['html', 'css', 'js', 'cname']);
+gulp.task('all', ['html', 'css', 'js', 'cname', 'images', 'files', 'watch']);
 
 gulp.task('html', function () {
     return gulp.src('./*.html')

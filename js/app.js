@@ -10,6 +10,38 @@ window.addEventListener('load', function () {
         window.alert(licenseText);
     });
 
+    /*
+    Navigational JavaScript
+    */
+    var topButton = document.getElementById('top-button');
+    topButton.addEventListener('click', function () {
+        document.body.scrollTop = 0;
+    });
+
+    var educationUrl = document.getElementById('educationUrl');
+    educationUrl.addEventListener('click', function () {
+        var educationSection = document.getElementById('education');
+        educationSection.scrollIntoView();
+    });
+
+    var skillsUrl = document.getElementById('skillsUrl');
+    skillsUrl.addEventListener('click', function () {
+        var skillsSection = document.getElementById('skills');
+        skillsSection.scrollIntoView();
+    });
+
+    var projectsUrl = document.getElementById('projectsUrl');
+    projectsUrl.addEventListener('click', function () {
+        var projectsSection = document.getElementById('projects');
+        projectsSection.scrollIntoView();
+    });
+
+    var contactUrl = document.getElementById('contactUrl');
+    contactUrl.addEventListener('click', function () {
+        var contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView();
+    });
+
     var skillScores = {
         html: '7/10',
         css: '8/10',
@@ -35,8 +67,6 @@ window.addEventListener('load', function () {
         gulp: false,
     };
 
-
-
     var skillHtml = document.getElementById('skill-html');
     skillHtml.addEventListener('click', function () {
         console.log('Clicked on HTML!');
@@ -48,7 +78,7 @@ window.addEventListener('load', function () {
             skillFlip.html = false;
         }
     });
-    
+
     var skillCss = document.getElementById('skill-css');
     skillCss.addEventListener('click', function () {
         console.log('Clicked on CSS!');
@@ -60,7 +90,7 @@ window.addEventListener('load', function () {
             skillFlip.css = false;
         }
     });
-    
+
     var skillJs = document.getElementById('skill-js');
     skillJs.addEventListener('click', function () {
         console.log('Clicked on JS!');
@@ -72,7 +102,7 @@ window.addEventListener('load', function () {
             skillFlip.js = false;
         }
     });
-    
+
     var skillGit = document.getElementById('skill-git')
     skillGit.addEventListener('click', function () {
         console.log('Clicked on Git!');
@@ -84,7 +114,7 @@ window.addEventListener('load', function () {
             skillFlip.git = false;
         }
     });
-    
+
     var skillAngular = document.getElementById('skill-angular');
     skillAngular.addEventListener('click', function () {
         console.log('Clicked on AngularJS!');
@@ -96,7 +126,7 @@ window.addEventListener('load', function () {
             skillFlip.angular = false;
         }
     });
-    
+
     var skillJquery = document.getElementById('skill-jquery');
     skillJquery.addEventListener('click', function () {
         console.log('Clicked on JQuery!');
@@ -108,7 +138,7 @@ window.addEventListener('load', function () {
             skillFlip.jquery = false;
         }
     });
-    
+
     var skillUnderscore = document.getElementById('skill-underscore');
     skillUnderscore.addEventListener('click', function () {
         console.log('Clicked on UnderscoreJS!');
@@ -120,7 +150,7 @@ window.addEventListener('load', function () {
             skillFlip.underscore = false;
         }
     });
-    
+
     var skillBackbone = document.getElementById('skill-backbone');
     skillBackbone.addEventListener('click', function () {
         console.log('Clicked on BackboneJS!');
@@ -132,7 +162,7 @@ window.addEventListener('load', function () {
             skillFlip.backbone = false;
         }
     });
-    
+
     var skillGulp = document.getElementById('skill-gulp');
     skillGulp.addEventListener('click', function () {
         console.log('Clicked on Gulp!');
@@ -144,13 +174,6 @@ window.addEventListener('load', function () {
             skillFlip.gulp = false;
         }
     });
-
-    var topButton = document.getElementById('top-button');
-    topButton.addEventListener('click', function () {
-       console.log('To the top'); 
-    });
-
-
 
 
 });

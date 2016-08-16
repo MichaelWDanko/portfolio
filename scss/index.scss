@@ -102,6 +102,7 @@ nav {
     border-bottom: 8px solid $color2;
     border-left: 3px solid $color2;
     border-right: 8px solid $color2;
+    border-radius: 10px;
 }
 .section:hover .section-content {
     //CSS to border the .section-content on hover.
@@ -128,7 +129,9 @@ nav {
     bottom: 0;
     right: 0;
     @include transition(all 0.5s ease-in-out);
-    opacity: .5
+    opacity: .5;
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
 }
 
 #top-button:hover {
@@ -198,6 +201,9 @@ Styling for the Skills section
     }
     li:hover {
         border: 3px solid $color4;
+    }
+    h2 {
+        text-align: center;
     }
 }
 
