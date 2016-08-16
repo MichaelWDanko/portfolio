@@ -68,10 +68,6 @@ header {
     }
     li:hover {
         border: 2px solid $color4;
-//        border-top: 2px solid $color4;
-//        border-left: 2px solid $color4;
-//        border-right: 2px solid transparent;
-//        border-bottom: 2px solid transparent;
         box-shadow: 3px 5px 0 0 $color7;
     }
 }
@@ -230,6 +226,34 @@ Styling for the Skills section
         font-style: italic;
     }
 }
+/*
+Styling for the Projects section
+*/
+.project {
+    border-bottom: 3px solid $color3;
+    overflow: auto;
+    margin-top: 10px;
+    h2 {
+        display: block;
+        margin: 0;
+    }
+    ul {
+        display: inline-block;
+        width: 50%;
+    }
+    li {
+        margin: 20px 0;
+        word-wrap: normal;
+    }
+}
+.screenshot {
+//    @include transform(scale(.2));
+    height: 30%;
+    width: 30%;
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
 
 
 /*
@@ -260,5 +284,5 @@ footer {
 
 // .project display:none is to test what the site looks like without the pictures
 .project {
-    display: none;
+//    display: none;
 }
