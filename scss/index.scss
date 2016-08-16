@@ -112,6 +112,29 @@ nav {
     color: white;
 }
 
+//#button-wrapper {
+//    display: flex;
+//    justify-content: space-around;
+//    position: fixed;
+//    bottom: 10px;
+//    width: 100%;
+//}
+.hidden {
+//    display: none;
+}
+#top-button {
+    @include transform(scale(0.10));
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    @include transition(all 0.5s ease-in-out);
+    opacity: .5
+}
+
+#top-button:hover {
+    opacity: 1;
+    @include transform(scale(0.15));
+}
 
 /*
 Styling for the About Me section
@@ -171,6 +194,7 @@ Styling for the Skills section
         padding: .4em .5em;
         margin: .5em 0;
         @include transition(all 0.5s ease-in-out);
+        cursor: pointer;
     }
     li:hover {
         border: 3px solid $color4;

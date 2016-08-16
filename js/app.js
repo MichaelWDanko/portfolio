@@ -145,7 +145,10 @@ window.addEventListener('load', function () {
         }
     });
 
-
+    var topButton = document.getElementById('top-button');
+    topButton.addEventListener('click', function () {
+       console.log('To the top'); 
+    });
 
 
 
