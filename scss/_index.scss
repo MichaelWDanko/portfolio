@@ -152,6 +152,10 @@ nav {
     margin: 1% auto;
 }
 
+#top-button:hover {
+    @include transform(scale(0.15));
+}
+
 /*
 Styling for the About Me section
 */
