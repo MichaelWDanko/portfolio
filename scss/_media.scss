@@ -23,10 +23,6 @@
             color: white;
         }
     }
-    @top-button:hover {
-        @include transform(scale(0.10));
-    }
-    
 }
 
 @media screen and (max-width: 1000px) {
