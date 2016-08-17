@@ -145,14 +145,14 @@ nav {
     @include border-bottom-radius(50%);
     cursor: pointer;
     position: fixed;
-    top: 60%;
+    top: 55%;
     right: 0;
     left: 0;
     margin: 1% auto;
 }
 
 #top-button:hover {
-//    opacity: .9;
+
     @include transform(scale(0.15));
 }
 
@@ -206,6 +206,8 @@ Styling for the Skills section
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding-left: 0;
+        
     }
     li {
         display: inline-block;
@@ -213,8 +215,8 @@ Styling for the Skills section
         border: 3px solid $color3;
         @include border-top-radius(10px);
         @include border-bottom-radius(10px);
-        padding: .4em .5em;
-        margin: .5em 0;
+        padding: .6em .7em;
+        margin: 0 8px;
         @include transition(all 0.5s ease-in-out);
         cursor: pointer;
     }
@@ -288,7 +290,7 @@ Footer styling
 footer {
     border-top: 5px solid $color3;
     background-color: $color1;
-    margin-top: 1em;
+    margin-top: 40px;
     margin-bottom: 0;
     color: white;
     a {
@@ -323,10 +325,4 @@ footer {
 //        padding-bottom: 0;
     }
     
-}
-
-
-// .project display:none is to test what the site looks like without the pictures
-.project {
-//    display: none;
 }
