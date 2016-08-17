@@ -122,6 +122,9 @@ nav {
     border-left: 3px solid $color2;
     border-right: 8px solid $color2;
     border-radius: 10px;
+    a {
+        @include transition(all 0.5s ease-in-out);
+    }
 }
 .section:hover .section-content {
     //CSS to border the .section-content on hover.
@@ -130,26 +133,30 @@ nav {
     border-left: 3px solid $color5;
     border-right: 8px solid $color5;
     color: white;
+    a {
+        color: white;
+    }
 }
 
 
 .hidden {
-//    display: none;
+    display: none;
 }
 #top-button {
     @include transform(scale(0.10));
-    position: fixed;
-    bottom: 0;
-    right: 0;
     @include transition(all 0.5s ease-in-out);
-    opacity: .3;
     @include border-top-radius(50%);
     @include border-bottom-radius(50%);
     cursor: pointer;
+    position: fixed;
+    top: 60%;
+    right: 0;
+    left: 0;
+    margin: 1% auto;
 }
 
 #top-button:hover {
-    opacity: .9;
+//    opacity: .9;
     @include transform(scale(0.15));
 }
 
@@ -236,6 +243,7 @@ Styling for the Projects section
     h2 {
         display: block;
         margin: 0;
+        color: $color3;
     }
     ul {
         display: inline-block;
@@ -244,6 +252,12 @@ Styling for the Projects section
     li {
         margin: 20px 0;
         word-wrap: normal;
+    }
+    a {
+        color: $color2;
+    }
+    a:clicked {
+        color: $color5; 
     }
 }
 .screenshot {
@@ -262,6 +276,12 @@ Styling for the Connect section
 #contactlinks {
     display: flex;
     justify-content: space-between;
+    a {
+        @include transition(all .3s ease-in-out);
+    }
+    a:hover {
+        @include transform(scale(1.2));
+    }
 }
 
 
@@ -273,12 +293,39 @@ footer {
     background-color: $color1;
     margin-top: 1em;
     margin-bottom: 0;
+    color: white;
+    a {
+        color: white;
+    }
 }
 .footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font1;
+    padding-bottom: 10px; 
+    
+    h1, h2, .footer-item {
+        display: inline-block;
+        cursor: pointer;
+        padding-bottom: 0;
+    }
+    
     h1 {
         margin-bottom: 0;
         padding-bottom: .5em;
+        font-size: 1.2em;
+        font-weight: 400;
     }
+    h2 {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    
+    .footer-item {
+        border-bottom: 2px solid white;
+//        padding-bottom: 0;
+    }
+    
 }
 
 

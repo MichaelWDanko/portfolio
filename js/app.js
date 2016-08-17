@@ -242,7 +242,7 @@ window.addEventListener('load', function () {
         };
         window.addEventListener('scroll', function () {
             clearTimeout(time);
-            time = setTimeout(displayElevator, 1500);
+            time = setTimeout(displayElevator, 800);
         });
     })();
 
