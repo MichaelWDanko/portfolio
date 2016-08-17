@@ -6,7 +6,6 @@ window.addEventListener('load', function () {
     var license = document.getElementById('license');
     var licenseText = "The phone, email, Twitter, linkedIn, and Facebook icons were designed by 'Freepix' from Flaticon. The GitHub icon was designed by 'Pixel Buddha' from Flaticon.";
     license.addEventListener('click', function () {
-        console.log('Clicked on licenses');
         window.alert(licenseText);
     });
 
@@ -119,7 +118,6 @@ window.addEventListener('load', function () {
     };
 
     skillHtml.addEventListener('click', function () {
-        console.log('Clicked on HTML!');
         if (skillFlip.html === false) {
             flipBack();
             skillHtml.textContent = skillScores.html;
@@ -130,7 +128,6 @@ window.addEventListener('load', function () {
         }
     });
     skillCss.addEventListener('click', function () {
-        console.log('Clicked on CSS!');
         if (skillFlip.css === false) {
             flipBack();
             skillCss.textContent = skillScores.css;
@@ -141,7 +138,6 @@ window.addEventListener('load', function () {
         }
     });
     skillJs.addEventListener('click', function () {
-        console.log('Clicked on JS!');
         if (skillFlip.js === false) {
             flipBack();
             skillJs.textContent = skillScores.js;
@@ -152,7 +148,6 @@ window.addEventListener('load', function () {
         }
     });
     skillGit.addEventListener('click', function () {
-        console.log('Clicked on Git!');
         if (skillFlip.git === false) {
             flipBack();
             skillGit.textContent = skillScores.git;
@@ -163,7 +158,6 @@ window.addEventListener('load', function () {
         }
     });
     skillAngular.addEventListener('click', function () {
-        console.log('Clicked on AngularJS!');
         if (skillFlip.angular === false) {
             flipBack();
             skillAngular.textContent = skillScores.angular;
@@ -174,7 +168,6 @@ window.addEventListener('load', function () {
         }
     });
     skillJquery.addEventListener('click', function () {
-        console.log('Clicked on JQuery!');
         if (skillFlip.jquery === false) {
             flipBack();
             skillJquery.textContent = skillScores.jquery;
@@ -185,7 +178,6 @@ window.addEventListener('load', function () {
         }
     });
     skillUnderscore.addEventListener('click', function () {
-        console.log('Clicked on UnderscoreJS!');
         if (skillFlip.underscore === false) {
             flipBack();
             skillUnderscore.textContent = skillScores.underscore;
@@ -196,7 +188,6 @@ window.addEventListener('load', function () {
         }
     });
     skillBackbone.addEventListener('click', function () {
-        console.log('Clicked on BackboneJS!');
         if (skillFlip.backbone === false) {
             flipBack();
             skillBackbone.textContent = skillScores.backbone;
@@ -207,7 +198,6 @@ window.addEventListener('load', function () {
         }
     });
     skillGulp.addEventListener('click', function () {
-        console.log('Clicked on Gulp!');
         if (skillFlip.gulp === false) {
             flipBack();
             skillGulp.textContent = skillScores.gulp;
@@ -230,15 +220,11 @@ window.addEventListener('load', function () {
             var educationScroll = document.getElementById('education').scrollHeight;
             var educationPercent = Math.round((educationScroll / totalScroll) * 1000) / 1000;
             var button = document.getElementById('top-button');
-
             if (Math.round((document.body.scrollTop / totalScroll) * 100) / 100 <= educationPercent) {
-                console.log('Not far enough');
                 button.classList.add('hidden');
             } else {
-                console.log('Show it');
                 button.classList.remove('hidden');
             }
-
         };
         window.addEventListener('scroll', function () {
             clearTimeout(time);
