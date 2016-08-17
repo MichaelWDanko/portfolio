@@ -1,7 +1,14 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1423px) {
     .columns {
         margin-left: 7%;
         margin-right: 7%;
+    }
+}
+@media screen and (max-width: 1325px) {
+    #skills {
+        li {
+            margin: 5px 20px;
+        }
     }
 }
 @media screen and (max-width: 1200px) {

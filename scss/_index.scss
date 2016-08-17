@@ -7,9 +7,9 @@ $font1: 'Exo 2', sans-serif;
 $color1: #4484CE;
 $color2: #D9D9D9;
 $color3: #F9CF00;
-//$color4: #F19F4D;
-$color4: #F3B270;
-$color5: #6d6d6d;
+$color4: #F19F4D;
+//$color4: #F3B270;
+$color5: #b6b6b6;
 $color6: #25548b;
 $color7: #214b7d;
 
@@ -19,7 +19,7 @@ Page wide stylings.
 html, body {
     margin: 0;
     height: 100%;
-    background-color: $color4;
+    background-color: $color5;
 }
 .columns {
     margin-left: 10%;
@@ -114,10 +114,10 @@ nav {
     font-size: 1.15em;
     
     @include transition(all 0.5s ease-in-out);
-    border-top: 3px solid $color2;
-    border-bottom: 8px solid $color2;
-    border-left: 3px solid $color2;
-    border-right: 8px solid $color2;
+    border-top: 3px solid $color3;
+    border-bottom: 8px solid $color3;
+    border-left: 3px solid $color3;
+    border-right: 8px solid $color3;
     border-radius: 10px;
     a {
         @include transition(all 0.5s ease-in-out);
@@ -125,10 +125,10 @@ nav {
 }
 .section:hover .section-content {
     //CSS to border the .section-content on hover.
-    border-top: 3px solid $color5;
-    border-bottom: 8px solid $color5;
-    border-left: 3px solid $color5;
-    border-right: 8px solid $color5;
+    border-top: 3px solid $color4;
+    border-bottom: 8px solid $color4;
+    border-left: 3px solid $color4;
+    border-right: 8px solid $color4;
     color: white;
     a {
         color: white;
@@ -217,7 +217,7 @@ Styling for the Skills section
         @include border-top-radius(10px);
         @include border-bottom-radius(10px);
         padding: .6em .7em;
-        margin: 0 8px;
+        margin: 0;
         @include transition(all 0.5s ease-in-out);
         cursor: pointer;
     }
@@ -242,7 +242,7 @@ Styling for the Projects section
     h2 {
         display: block;
         margin: 0;
-        color: $color3;
+//        color: $color3;
     }
     ul {
         display: inline-block;
