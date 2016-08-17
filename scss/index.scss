@@ -307,7 +307,7 @@ footer {
     h1, h2, .footer-item {
         display: inline-block;
         cursor: pointer;
-        padding-bottom: 0;
+        padding: 0;
     }
     
     h1 {
@@ -322,8 +322,7 @@ footer {
     }
     
     .footer-item {
-        border-bottom: 2px solid white;
-//        padding-bottom: 0;
+        border: 2px solid white;
     }
     
 }
