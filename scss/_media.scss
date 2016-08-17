@@ -1,0 +1,76 @@
+@media screen and (max-width: 1400px) {
+    .columns {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .columns {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .section-content {
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .columns {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .section-content {
+        padding: 10px;
+    }
+    #skills{
+        h2 {
+            font-size: 1.3em;
+        }
+        li {
+            padding: .3em .4em;
+            margin: 0px;
+        }
+    }
+
+    
+    .project {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: visible;
+        
+        ul {
+            width: 100%;
+        }
+        .screenshot {
+            display: flex;
+            float: none;
+            height: 60%;
+            width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+    }
+    
+    #contactlinks {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        a {
+            @include transform(scale(0.8));
+            text-align: center;
+        }
+        a:hover {
+            @include transform(scale(0.8));
+        }
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-item {
+        display: flex;
+        text-align: center;
+    }
+    
+}

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <title>Michael Danko</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/app.js"></script>
     <link rel="icon" href="/images/favicon.png">
 </head>
 
 <body>
+    <img id="top-button" class="hidden" src="images/top.png" alt="A button to take users back to the top of the page.">
     <header class="">
         <div class="header-content columns">
             <h1>Michael Danko</h1>
@@ -24,7 +26,6 @@
         </div>
     </header>
 
-
     <main class="columns">
 
         <div class="section" id="about">
@@ -37,7 +38,7 @@
 
                 <p> This past February I typed my first JavaScript function and since then, I have discovered a new passion in my life. I had the opportunity to be apart of The Iron Yard - Charlotte's first group of students to enroll and complete the JavaScript and MVC Frameworks course. Prior to the 12 week immersive course, I could barely explain the difference between classes and IDs used in HTML5 but now I am proficient enough to be exploring frameworks such as AngularJS.</p>
 
-                <p>As a developer, I am self motivated to do what it takes to complete any project I am working on. I enjoy collaborating on bigger projects with others as I believe I believe in seeking out additional perspectives is important. By attending local web focused Meetups I have been able to learn more about the field by emulating the more experienced developers around me. The community of developers is just one aspect of web development that I enjoy. The helpfulness and collaborative mindset is what drives me to give back and contribute to the open-source community.</p>
+                <p>As a developer, I am self motivated to do what it takes to complete any project I am working on. I enjoy collaborating on bigger projects with others to remain open minded, inspired and challenged to constantly grow and create. By attending local web focused Meetups I have been able to learn more about the field by emulating the more experienced developers around me. The community of developers is just one aspect of web development that I enjoy. The helpfulness and collaborative mindset is what drives me to give back and contribute to the open-source community.</p>
 
 
             </div>
@@ -96,6 +97,9 @@
                         <li>A one page, multi-view AngularJS application</li>
                         <li>Delivers a 5-day weather forecast relative to a user's geolocation</li>
                         <li>Utilizes multiple AJAX requests to retrieve information</li>
+                        <a href="https://welcomeweather.surge.sh">
+                            <li>WelcomeWeather.surge.sh</li>
+                        </a>
                     </ul>
                     <img class="screenshot" src="images/screen-welcome.png" alt="A screenshot of the Welcome Weather application.">
                 </div>
@@ -105,6 +109,9 @@
                         <li>A multi-view AngularJS application</li>
                         <li>Utilizing a supplied API, creates a stream of news articles from relevant sources using AJAX requests</li>
                         <li>Highlights articles with titles matching an interest list created by users</li>
+                        <a href="http://anchorman-app.surge.sh/#/feed">
+                            <li>Anchorman-App.surge.sh</li>
+                        </a>
                     </ul>
                     <img class="screenshot" src="images/screen-anchorman.png" alt="A screenshot of the Anchorman application.">
                 </div>
@@ -114,6 +121,9 @@
                         <li>Used BackboneJS to create an interactive game with a visual element</li>
                         <li>Included hardware support for arrow keys to navigate the game</li>
                         <li>Users choose between two vehicles with varying fuel consumption rates as they try to navigate throughout the map without losing fuel</li>
+                        <a href="http://olympic-game.surge.sh">
+                            <li>Olympic-Game.surge.sh</li>
+                        </a>
 
                     </ul>
                     <img class="screenshot" src="images/screen-olympic.png" alt="A screenshot of the Olympic Adventures game.">
@@ -124,7 +134,7 @@
         <div class="section" id="contact">
             <h1 class="section-header left">Connect</h1>
             <div class="section-content" id="contactlinks">
-                <a href="mailto:MichaelDanko@icloud.com"><img src="images/mail.png" alt="A URL icon for Michael Danko's email."></a>
+                <a href="mailto:MichaelDanko@icloud.com?subject= Connecting From Resume"><img src="images/mail.png" alt="A URL icon for Michael Danko's email."></a>
                 <a href="tel:17047437035"><img src="images/phone.png" alt="A URL icon for Michael Danko's phone number."></a>
                 <a target="_blank" href="https://linkedin.com/in/MichaelWDanko"><img src="images/linkedin.png" alt="A URL icon for Michael Danko's LinkedIn page."></a>
                 <a target="_blank" href="https://github.com/MichaelWDanko"><img src="images/github2.png" alt="A URL icon for Michael Danko's GitHub profile."></a>
@@ -135,16 +145,18 @@
     </main>
     <footer>
         <div class="footer-content columns">
-            <!--        Include content here to credit icons-->
-            <h1 id="license">Licenses</h1>
-            <h1>Email:</h1>
-            <h2>MichaelDanko@icloud.com</h2>
-            <h1>Phone:</h1>
-            <h2>(704) 743-7035</h2>
-            <a target="_blank" href="./files/Michael_Danko_Resume.pdf"><h1>Resume</h1></a>
+            <h1 class="footer-item" id="license">Licenses</h1>
+            <div class="footer-item">
+                <h1>Email:</h1>
+                <a href="mailto:MichaelDanko@icloud.com"><h2>MichaelDanko@icloud.com</h2></a>
+            </div>
+            <div class="footer-item">
+                <a href="tel:17047437035"><h1>Phone:</h1>
+                    <h2>(704) 743-7035</h2></a>
+            </div>
+            <a class="footer-item" target="_blank" href="./files/Michael_Danko_Resume.pdf"><h1>Michael_Danko_Resume.pdf</h1></a>
         </div>
     </footer>
-    <img id="top-button" class="hidden" src="images/top.png" alt="A button to take users back to the top of the page.">
 </body>
 
 </html>

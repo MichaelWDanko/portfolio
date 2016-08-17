@@ -1,10 +1,7 @@
 @import "bourbon/bourbon";
-@import "neat/neat";
+//@import "neat/neat";
 @import url(https://fonts.googleapis.com/css?family=Exo+2:400,200,500,700,300italic);
 
-/*
-SASS Variables
-*/
 $font1: 'Exo 2', sans-serif;
 
 $color1: #4484CE;
@@ -14,7 +11,6 @@ $color4: #F19F4D;
 $color5: #6d6d6d;
 $color6: #25548b;
 $color7: #214b7d;
-
 
 /*
 Page wide stylings.
@@ -68,10 +64,6 @@ header {
     }
     li:hover {
         border: 2px solid $color4;
-//        border-top: 2px solid $color4;
-//        border-left: 2px solid $color4;
-//        border-right: 2px solid transparent;
-//        border-bottom: 2px solid transparent;
         box-shadow: 3px 5px 0 0 $color7;
     }
 }
@@ -126,6 +118,9 @@ nav {
     border-left: 3px solid $color2;
     border-right: 8px solid $color2;
     border-radius: 10px;
+    a {
+        @include transition(all 0.5s ease-in-out);
+    }
 }
 .section:hover .section-content {
     //CSS to border the .section-content on hover.
@@ -134,26 +129,30 @@ nav {
     border-left: 3px solid $color5;
     border-right: 8px solid $color5;
     color: white;
+    a {
+        color: white;
+    }
 }
 
 
 .hidden {
-//    display: none;
+    display: none;
 }
 #top-button {
     @include transform(scale(0.10));
-    position: fixed;
-    bottom: 0;
-    right: 0;
     @include transition(all 0.5s ease-in-out);
-    opacity: .3;
     @include border-top-radius(50%);
     @include border-bottom-radius(50%);
     cursor: pointer;
+    position: fixed;
+    top: 55%;
+    right: 0;
+    left: 0;
+    margin: 1% auto;
 }
 
 #top-button:hover {
-    opacity: .9;
+
     @include transform(scale(0.15));
 }
 
@@ -207,6 +206,8 @@ Styling for the Skills section
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding-left: 0;
+        
     }
     li {
         display: inline-block;
@@ -214,8 +215,8 @@ Styling for the Skills section
         border: 3px solid $color3;
         @include border-top-radius(10px);
         @include border-bottom-radius(10px);
-        padding: .4em .5em;
-        margin: .5em 0;
+        padding: .6em .7em;
+        margin: 0 8px;
         @include transition(all 0.5s ease-in-out);
         cursor: pointer;
     }
@@ -230,6 +231,41 @@ Styling for the Skills section
         font-style: italic;
     }
 }
+/*
+Styling for the Projects section
+*/
+.project {
+    border-bottom: 3px solid $color3;
+    overflow: auto;
+    margin-top: 10px;
+    h2 {
+        display: block;
+        margin: 0;
+        color: $color3;
+    }
+    ul {
+        display: inline-block;
+        width: 50%;
+    }
+    li {
+        margin: 20px 0;
+        word-wrap: normal;
+    }
+    a {
+        color: $color2;
+    }
+    a:clicked {
+        color: $color5; 
+    }
+}
+.screenshot {
+//    @include transform(scale(.2));
+    height: 30%;
+    width: 30%;
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
 
 
 /*
@@ -238,6 +274,13 @@ Styling for the Connect section
 #contactlinks {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+        @include transition(all .3s ease-in-out);
+    }
+    a:hover {
+        @include transform(scale(1.2));
+    }
 }
 
 
@@ -247,18 +290,39 @@ Footer styling
 footer {
     border-top: 5px solid $color3;
     background-color: $color1;
-    margin-top: 1em;
+    margin-top: 40px;
     margin-bottom: 0;
+    color: white;
+    a {
+        color: white;
+    }
 }
 .footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font1;
+    padding-bottom: 10px; 
+    
+    h1, h2, .footer-item {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0;
+    }
+    
     h1 {
         margin-bottom: 0;
         padding-bottom: .5em;
+        font-size: 1.2em;
+        font-weight: 400;
     }
-}
-
-
-// .project display:none is to test what the site looks like without the pictures
-.project {
-    display: none;
+    h2 {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    
+    .footer-item {
+        border-bottom: 2px solid white;
+//        padding-bottom: 0;
+    }
+    
 }
